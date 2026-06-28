@@ -19,5 +19,25 @@
     "skills": [
       "./skills"
     ]
+  },
+  "cline": {
+    "plugins": [
+      {
+        "paths": [
+          "./.cline/plugins/superpowers.ts"
+        ],
+        "capabilities": [
+          "messageBuilders"
+        ]
+      }
+    ]
+  },
+  "peerDependencies": {
+    "@cline/core": "*"
+  },
+  "peerDependenciesMeta": {
+    "@cline/core": {
+      "optional": true
+    }
   }
 }

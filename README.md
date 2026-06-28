@@ -11,7 +11,7 @@ If this sounds like someone you know, definitely send them our way.
 
 ## Quickstart
 
-Give your agent Superpowers: [Claude Code](#claude-code), [Antigravity](#antigravity), [Codex App](#codex-app), [Codex CLI](#codex-cli), [Cursor](#cursor), [Factory Droid](#factory-droid), [Gemini CLI](#gemini-cli), [GitHub Copilot CLI](#github-copilot-cli), [Kimi Code](#kimi-code), [OpenCode](#opencode), [Pi](#pi).
+Give your agent Superpowers: [Claude Code](#claude-code), [Antigravity](#antigravity), [Cline](#cline), [Codex App](#codex-app), [Codex CLI](#codex-cli), [Cursor](#cursor), [Factory Droid](#factory-droid), [Gemini CLI](#gemini-cli), [GitHub Copilot CLI](#github-copilot-cli), [Kimi Code](#kimi-code), [OpenCode](#opencode), [Pi](#pi).
 
 ## How it works
 
@@ -71,6 +71,24 @@ agy plugin install https://github.com/obra/superpowers
 
 Antigravity runs the plugin's session-start hook, so Superpowers is active from
 the first message. Reinstall with the same command to update.
+
+### Cline
+
+Cline uses its own plugin install; install Superpowers separately even if you
+already use it in another harness. The same plugin works across the Cline CLI,
+Kanban, and SDK (anything built on ClineCore).
+
+Install Superpowers as a Cline plugin from this repository:
+
+```bash
+cline plugin install https://github.com/obra/superpowers.git
+```
+
+The plugin registers the `using-superpowers` bootstrap (injected at the start of
+every session) and auto-discovers all bundled skills, so Superpowers is active
+from the first message. Reinstall with `--force` to update.
+
+- Detailed docs: [docs/README.cline.md](docs/README.cline.md)
 
 ### Codex App
 
