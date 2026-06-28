@@ -55,7 +55,8 @@ Skills speak in actions ("read a file", "run a shell command", "dispatch a subag
 - Search file contents / find files → \`search\`
 - Fetch a URL → \`fetch_web\`
 - Ask your human partner a structured question → \`ask_question\`
-- Dispatch a subagent (\`Subagent (general-purpose):\` template) → \`use_subagents\` (read-only research agents; multiple entries run in parallel). Cline subagents cannot write files — do write work in this session.
+- Dispatch a read-only research/review subagent (\`Subagent (general-purpose):\` template) → \`use_subagents\` (read-only agents; multiple entries run in parallel; cannot write files).
+- Dispatch a write-capable subagent that edits files, runs tests, and commits (e.g. \`subagent-driven-development\` implementers) → a teammate: \`team_spawn_teammate\` then \`team_run_task\`. Teammates have \`editor\`, mutating \`run_commands\`, and \`skills\`; the bootstrap auto-injects so skills auto-trigger there too. Use \`runMode: sync\` + fresh context per task for the sequential implementer; \`runMode: async\` + \`team_await_runs\` for parallel write work.
 - Task tracking ("create a todo", "mark complete") → Cline has no todo tool; track work in a plan file or repo-local \`TODO.md\`.
 
 Legacy Cline tool names (\`read_file\`, \`replace_in_file\`, \`execute_command\`) are aliases for the current built-ins above. Full reference: skills/using-superpowers/references/cline-tools.md.`;

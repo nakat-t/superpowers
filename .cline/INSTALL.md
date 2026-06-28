@@ -97,7 +97,8 @@ On Cline these resolve to ClineCore's built-in tools — see
 - "Search file contents / find files" → `search`
 - "Fetch a URL" → `fetch_web`
 - "Ask a structured question" → `ask_question`
-- "Dispatch a subagent" → `use_subagents` (read-only research agents)
+- "Dispatch a read-only research/review subagent" → `use_subagents` (read-only agents)
+- "Dispatch a write-capable subagent" (edits files, runs tests, commits) → a teammate (`team_spawn_teammate` + `team_run_task`)
 - "Create a todo" → no todo tool; track work in a plan file or `TODO.md`
 
 ## Updating

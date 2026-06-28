@@ -119,8 +119,12 @@ Skills speak in actions rather than naming any one runtime's tools. On Cline
 - "Search file contents" / "find files by name" → `search`
 - "Fetch a URL" → `fetch_web`
 - "Ask a structured question" → `ask_question`
-- "Dispatch a subagent" (`Subagent (general-purpose):` template) → `use_subagents`
-  (read-only research agents; multiple entries run in parallel)
+- "Dispatch a read-only research/review subagent" (`Subagent (general-purpose):`
+  template) → `use_subagents` (read-only agents; multiple entries run in parallel)
+- "Dispatch a write-capable subagent" (edits files, runs tests, commits — e.g.
+  `subagent-driven-development` implementers) → a teammate (`team_spawn_teammate`
+  then `team_run_task`). Teammates have `editor`, mutating `run_commands`, and
+  `skills`, and the bootstrap auto-injects so skills auto-trigger there too.
 - "Create a todo" / "mark complete" → no todo tool; track work in a plan file or
   repo-local `TODO.md`
 
